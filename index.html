@@ -16,41 +16,23 @@
             <form id="currency-converter-form">
                 <div class="input-container">
                     <label class="input-label">Enter amount</label>
-                    <input type="number" class="input-amount" placeholder="100" required/>
+                    <input type="number" id="input-amount" placeholder="100" required/>
                 </div>
                 
                 <div class="dropdown-container">
-                    <select id="from-dropdown">
-                        <option value="">
-                            Select a Currency
-                        </option>
-                        <option value="USD">
-                            USD - United States Dollar
-                        </option>
-                        <option value="INR">
-                            INR - Indian Rupee
-                        </option>
-                    </select>
+                    <select id="from-dropdown"></select>
                     <label>TO</label>
-                    <select id="to-dropdown">
-                        <option value="">
-                            Select a Currency
-                        </option>
-                        <option value="USD">
-                            USD - United States Dollar
-                        </option>
-                        <option value="INR">
-                            INR - Indian Rupee
-                        </option>
-                    </select>
+                    <select id="to-dropdown"></select>
                 </div>
                 
                 <button type="submit" class="convert-btn">
                     Convert
                 </button>
             </form>
-            <p id="result-message" class="hidden">100 USD = 8,407.52 INR</p>
+            <p id="result-message" class="hidden"></p>
             <p id="error-message" class="hidden">An error occurred, please try again later</p>
         </div>
+
+        <script src="./currencyConverter.js"></script>
     </body>
 </html>
