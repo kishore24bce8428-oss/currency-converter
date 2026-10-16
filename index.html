@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Currency Converter</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" 
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="content-section">
+            <h1 id="title">Currency Converter</h1>
+            <form id="currency-converter-form">
+                <div class="input-container">
+                    <label class="input-label">Enter amount</label>
+                    <input type="number" class="input-amount" placeholder="100" required/>
+                </div>
+                
+                <div class="dropdown-container">
+                    <select id="from-dropdown">
+                        <option value="">
+                            Select a Currency
+                        </option>
+                        <option value="USD">
+                            USD - United States Dollar
+                        </option>
+                        <option value="INR">
+                            INR - Indian Rupee
+                        </option>
+                    </select>
+                    <label>TO</label>
+                    <select id="to-dropdown">
+                        <option value="">
+                            Select a Currency
+                        </option>
+                        <option value="USD">
+                            USD - United States Dollar
+                        </option>
+                        <option value="INR">
+                            INR - Indian Rupee
+                        </option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="convert-btn">
+                    Convert
+                </button>
+            </form>
+            <p id="result-message" class="hidden">100 USD = 8,407.52 INR</p>
+            <p id="error-message" class="hidden">An error occurred, please try again later</p>
+        </div>
+    </body>
+</html>

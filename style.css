@@ -1,0 +1,85 @@
+body{
+    font-family:Lato;
+    background-color: #f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+#title{
+    text-shadow: 2px 2px 2px gray;
+}
+.content-section{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color: #F8D800;
+    height:auto;
+    width:500px;
+    border-radius:8px;
+    text-align: center;
+    box-shadow: 1px 1px 2px gray;
+    padding:40px 60px;
+}
+#title{
+    padding-bottom:30px;
+}
+#currency-converter-form{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+.input-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.input-label{
+    display:block;
+    font-family: 'Lato';
+}
+.input-amount{
+    display:block;
+    padding-top:5px;
+    margin-top:20px;
+    border-radius:4px;
+    border-style:solid;
+    width:300px;
+}
+.input-amount:active{
+    border-color:#555;
+}
+.convert-btn{
+    background-color: #007bff;
+    box-shadow: 1px 1px 1px gray;
+    border:none;
+    color:white;
+    width:300px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius:4px;
+}
+.dropdown-container{
+    display:flex;
+    width:300px;
+    gap:20px;
+}
+#from-dropdown,#to-dropdown{
+    max-width:120px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius:4px;
+}
+#result-message,#error-message{
+    font-weight:bold;
+}
+#error-message{
+    color:red;
+}
+.hidden{
+    display:none;
+}
