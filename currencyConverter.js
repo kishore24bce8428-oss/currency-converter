@@ -9,18 +9,35 @@ const fromDropdown = document.getElementById('from-dropdown');
 const toDropdown = document.getElementById('to-dropdown');
 const amountInput = document.getElementById('input-amount');
 const converterForm = document.getElementById('currency-converter-form');
+const convertBtn=document.querySelector('.convert-btn');
 
 let currencies = [];
+let resultTimer;
+let errorTimer;
+
+const disableConvertButton=()=>{
+        convertBtn.disabled=true;
+        convertBtn.textContent='Converting...';
+}
+const enableConvertButton=()=>{
+        convertBtn.disabled=false;
+        convertBtn.textContent='Convert';
+}
+
 
 const displayResult=() =>{
+        enableConvertButton();
+        clearTimeout(resultTimer);
         resultMessage.classList.remove('hidden');
-        setTimeout(() => {
+        resultTimer = setTimeout(() => {
                 resultMessage.classList.add('hidden');
         },5000);
 }
 const displayError=() =>{
+        enableConvertButton();
+        clearTimeout(errorTimer);
         errorMessage.classList.remove('hidden');
-        setTimeout(() => {
+        errorTimer = setTimeout(() => {
                 errorMessage.classList.add('hidden');
         },5000);
 }
@@ -81,6 +98,9 @@ function populateDropdowns() {
 const convertCurrency= async (event) => {
     try{
         event.preventDefault();
+
+        disableConvertButton();
+
         const amount=Number(amountInput.value);
         if(isNaN(amount) || amount<=0){
             alert("Please enter a valid amount");

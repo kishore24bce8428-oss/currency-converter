@@ -44,9 +44,10 @@ body{
 }
 #input-amount{
     display:block;
-    padding-top:5px;
+    padding-top:6px;
+    padding-bottom:6px;
     margin-top:20px;
-    border-radius:4px;
+    border-radius:6px;
     border-style:solid;
     width:300px;
 }
@@ -59,9 +60,13 @@ body{
     border:none;
     color:white;
     width:300px;
-    padding-top:5px;
-    padding-bottom:5px;
-    border-radius:4px;
+    padding-top:6px;
+    padding-bottom:6px;
+    border-radius:6px;
+}
+.convert-btn:hover{
+    background-color: #0056b3;
+    cursor:pointer;
 }
 .dropdown-container{
     display:flex;
@@ -70,9 +75,12 @@ body{
 }
 #from-dropdown,#to-dropdown{
     max-width:120px;
-    padding-top:5px;
-    padding-bottom:5px;
-    border-radius:4px;
+    padding-top:6px;
+    padding-bottom:6px;
+    border-radius:6px;
+}
+#from-dropdown:hover,#to-dropdown:hover{
+    cursor:pointer;
 }
 #result-message,#error-message{
     font-weight:bold;
