@@ -78,6 +78,7 @@ body{
     padding-top:6px;
     padding-bottom:6px;
     border-radius:6px;
+    font-size:12px;
 }
 #from-dropdown:hover,#to-dropdown:hover{
     cursor:pointer;
