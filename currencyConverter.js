@@ -14,6 +14,8 @@ const converterForm = document.getElementById('currency-converter-form');
 const convertBtn=document.querySelector('.convert-btn');
 const fromOptions=document.getElementById('from-options');
 const toOptions=document.getElementById('to-options');
+const fromArrow=document.getElementById('from-arrow');
+const toArrow=document.getElementById('to-arrow');
 
 let currencies = [];
 let resultTimer;
@@ -33,8 +35,10 @@ selectedFromOption.addEventListener('click', () => {
         fromOptionsPopulated=true;
     }
     if(fromOptions.style.display==='none'){
+        fromArrow.innerHTML='&and;';
         fromOptions.style.display='block';
     }else{
+        fromArrow.innerHTML='&#8744;';
         fromOptions.style.display='none';
     }
 });
@@ -50,8 +54,10 @@ selectedToOption.addEventListener('click', () => {
         toOptionsPopulated=true;
     }
     if(toOptions.style.display==='none'){
+        toArrow.innerHTML='&and;';
         toOptions.style.display='block';
     }else{
+        toArrow.innerHTML='&#8744;';
         toOptions.style.display='none';
     }
 });
